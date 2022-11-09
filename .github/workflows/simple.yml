@@ -1,0 +1,16 @@
+name: Shell Commands
+on: [push]
+jobs: 
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      -name: echo a string
+      run: echo "Hello Anubhav"
+      -name: multiline script
+      run: |
+       node -v
+       npm -v
+      -name: python commands
+      run: |
+       import platform
+       print(platform.processor())

@@ -1,16 +1,12 @@
-name: Shell Commands
 on: [push]
-jobs: 
-  run-shell-commands:
-    runs-on: ubuntu-latest
-    steps:
-      -name: echo a string
-      run: echo "Hello Anubhav"
-      -name: multiline script
-      run: |
-       node -v
-       npm -v
-      -name: python commands
-      run: |
-       import platform
-       print(platform.processor())
+
+jobs:
+  build:
+  name: Hello world
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v2
+  - name: Write a multi-line message
+    run: |
+      echo This demo file shows a 
+      echo very basic and easy-to-understand workflow.
